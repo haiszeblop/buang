@@ -146,7 +146,7 @@ const WatchingContainer = ({ data = [], slug }) => {
       </PlayBack>)}
 
       </div>
-<Plyr source="videoSrc"/>
+<Plyr source={videoSrc}/>
       <video
         src={link}
         width="1024"
