@@ -84,7 +84,7 @@ const WatchingContainer = ({ data = [], slug }) => {
   	type: "video",
   	sources: [
   		    {
-  		    	src: {link}
+  		    	src: "https://storage.googleapis.com/crested-booking-306814/242CKYGFD_U/22a_1615155452154126.mp4"
   		    }
   		],
   	
