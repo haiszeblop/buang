@@ -51,35 +51,9 @@ const WatchingContainer = ({ data = [], slug }) => {
   const [link, setLink] = useState("");
   const [myList, setMyList] = useState([]);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (data.links?.length > 0) {
-      setMyList([...data.links]);
-      setLink(data.links[0].src);
+  
 
-      if (
-        Myref.current &&
-        resumeId &&
-        slug[0] == resumeId.data[0] &&
-        slug[1] == resumeId.data[1]
-      ) {
-        Myref.current.currentTime = parseFloat(resumeId.time);
-      }
-      var myInterval = setInterval(() => {
-        dispatch(
-          resumeAction({
-            data: slug,
-            time: Myref.current?.currentTime ? Myref.current.currentTime : 0,
-          })
-        );
-      }, 5000);
-    }
-    return () => clearInterval(myInterval);
-  }, [data.links]);
-
-  const handleClick=(rate)=>{
-    Myref.current.playbackRate=rate;
-
-  }
+ 
   const videoSrc = {
   	type: "video",
   	sources: [
