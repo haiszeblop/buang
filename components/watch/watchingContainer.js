@@ -92,37 +92,13 @@ const WatchingContainer = ({ data = [], slug }) => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="relative lg:h-1/3  flex justify-center items-center text-left flex-col h-screen w-full px-2 ">
-      <div
-        className={` flex flex-col pb-2 xl:w-player justify-between items-center w-full ${theme.text.selected}   my-4`}
-      >
-        <div className="w-full py-4 uppercase flex flex-col items-start lg:items-start">
-          <Link href={`/details/${slug[0]}`}>
-          <span style="font-size:10px;" className={`font-light text-2xl lg:text-4xl ml-0 lg:ml-7 cursor-pointer text-blue-500`}>
-            {slug[0].replaceAll("-", " ")}
-          </span>
 
-          </Link>
-          <div className={`bg-gray-400 rounded-full h-0.5 ml-0 lg:ml-8 w-1/12`} />
-        </div>
-        <div className="flex w-full justify-between items-end">
-          <span className={`${theme.text.selected} ml-0 lg:ml-7 text-3xl lg:text-3xl`}>
-            {"Ep:" + slug[1]}
-          </span>
-       
-        </div>
-      </div>
-      <div className="col-lg-12 col-12">
-
-<Plyr source={videoSrc}/>
+     
+        
+    <Plyr source={videoSrc}/>
       
-        </div>
-      <PagiNation
-        page={[slug[0], slug[1]]}
-        heading={"Ep"}
-        total={data.totalepisode}
-        />
-    </div>
+       
+ 
   );
 };
 
