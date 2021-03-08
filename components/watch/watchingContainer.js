@@ -98,7 +98,7 @@ const WatchingContainer = ({ data = [], slug }) => {
       >
         <div className="w-full py-4 uppercase flex flex-col items-start lg:items-start">
           <Link href={`/details/${slug[0]}`}>
-          <span className={`font-light text-2xl lg:text-4xl ml-0 lg:ml-7 cursor-pointer text-blue-500`}>
+          <span style="font-size:10px;" className={`font-light text-2xl lg:text-4xl ml-0 lg:ml-7 cursor-pointer text-blue-500`}>
             {slug[0].replaceAll("-", " ")}
           </span>
 
@@ -109,44 +109,11 @@ const WatchingContainer = ({ data = [], slug }) => {
           <span className={`${theme.text.selected} ml-0 lg:ml-7 text-3xl lg:text-3xl`}>
             {"Ep:" + slug[1]}
           </span>
-          <Select
-            name="Select links"
-            onChange={(event) => {
-              setLink(event.target.value);
-            }}
-            button={theme.button}
-            className={`h-11 cursor-pointer outline-none border ${theme.border.selected} rounded-full ${theme.button.background} border ${theme.button.text} ${theme.button.border} shadow-2xl transition-all duration-500`}
-            value={link}
-            theme={theme}
-          >
-            {myList.map((item, index) => {
-              return (
-                <option
-                  key={index}
-                  className={`${theme.text.notselected} ${theme.border.selected} border outline-none`}
-                  value={item.src}
-                >
-                  {item.size.replace(/[()]/g, "")}
-                </option>
-              );
-            })}
-          </Select>
+       
         </div>
       </div>
-      <div className="flex w-full justify-center items-center flex-col-reverse lg:flex-row">
+      <div className="col-lg-12 col-12">
 
-      <div className={`flex flex-row lg:flex-col justify-center items-center`}>
-      {Data.map((Item)=><PlayBack
-        button={theme.detailsButton}
-        key={Item.id}
-        className={`shadow-2xl transition-all duration-500 my-4 lg:my-1 mx-2 p-2 flex justify-center items-center w-12 h-12 rounded-full cursor-pointer`}
-        onClick={()=>handleClick(Item.rate)}
-        active={Myref.current?.playbackRate==Item.rate}
-        >
-        {Item.rate+"x"}
-      </PlayBack>)}
-
-      </div>
 <Plyr source={videoSrc}/>
       
         </div>
