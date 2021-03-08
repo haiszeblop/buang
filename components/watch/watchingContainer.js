@@ -5,7 +5,8 @@ import PagiNation from "../PagiNation";
 import Loader from "../Loader/Loader";
 import { resumeAction } from "../../redux/actions/resumeAction";
 import Link from "next/link";
-
+import Plyr from 'plyr-react';
+import 'plyr-react/dist/plyr.css';
 const Data=[{id:1,rate:0.25},{id:2,rate:0.5},{id:3,rate:1},{id:4,rate:1.25},{id:5,rate:1.5},{id:6,rate:2}]
 
 const PlayBack=styled.span`
