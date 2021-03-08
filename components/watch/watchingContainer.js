@@ -79,7 +79,15 @@ const WatchingContainer = ({ data = [], slug }) => {
     Myref.current.playbackRate=rate;
 
   }
-
+  const videoSrc = {
+  	type: "video",
+  	sources: [
+  		    {
+  		    	src: {link}
+  		    }
+  		],
+  	
+  };
   return loading ? (
     <Loader />
   ) : (
@@ -138,7 +146,7 @@ const WatchingContainer = ({ data = [], slug }) => {
       </PlayBack>)}
 
       </div>
-
+<Plyr source="videoSrc"/>
       <video
         src={link}
         width="1024"
