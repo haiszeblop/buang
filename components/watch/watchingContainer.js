@@ -148,16 +148,7 @@ const WatchingContainer = ({ data = [], slug }) => {
 
       </div>
 <Plyr source={videoSrc}/>
-      <video
-        src={link}
-        width="1024"
-        autoPlay
-        height="576"
-        controls
-        ref={Myref}
-        style={{    boxShadow:" 0rem 2rem 5rem rgba(0, 0, 0, 0.2)"
-        }}
-        ></video>
+      
         </div>
       <PagiNation
         page={[slug[0], slug[1]]}
